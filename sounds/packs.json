@@ -1,0 +1,269 @@
+[
+  {
+    "audio" : "unicomp.flac",
+    "id" : "unicomp",
+    "kind" : "Buckling spring",
+    "name" : "Unicomp",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Typing on a keyboard",
+        "url" : "https:\/\/freesound.org\/s\/489423\/",
+        "user" : "SamsterBirdies"
+      }
+    ],
+    "summary" : "A Unicomp buckling-spring keyboard, the Model M design: a big, springy click-clack.",
+    "takes" : 46
+  },
+  {
+    "audio" : "whitefox.flac",
+    "id" : "whitefox",
+    "kind" : "Tactile",
+    "name" : "WhiteFox",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Keyboard Typing 10 (WhiteFox, Mechanical)",
+        "url" : "https:\/\/freesound.org\/s\/546167\/",
+        "user" : "grcekh"
+      }
+    ],
+    "summary" : "A WhiteFox board with Hako Violet switches: punchy, with a long ring.",
+    "takes" : 45
+  },
+  {
+    "audio" : "topre.flac",
+    "id" : "topre",
+    "kind" : "Electro-capacitive",
+    "name" : "Topre",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Keyboard Typing 2 (HHKB, Topre)",
+        "url" : "https:\/\/freesound.org\/s\/546033\/",
+        "user" : "grcekh"
+      }
+    ],
+    "summary" : "A Happy Hacking Keyboard with Topre switches: deep, rounded thock.",
+    "takes" : 30
+  },
+  {
+    "audio" : "vintage-technics.flac",
+    "id" : "vintage-technics",
+    "kind" : "Linear, modded",
+    "name" : "Vintage Technics",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Keyboard typing sounds: Unidentified Technics keyboard",
+        "url" : "https:\/\/freesound.org\/s\/665075\/",
+        "user" : "zrrion"
+      }
+    ],
+    "summary" : "An old Technics board with waxed Gateron Yellows: chunky and old-school.",
+    "takes" : 42
+  },
+  {
+    "audio" : "mx-brown.flac",
+    "id" : "mx-brown",
+    "kind" : "Tactile",
+    "name" : "MX Brown",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Mechanical Keyboard Cherry MX Brown",
+        "url" : "https:\/\/freesound.org\/s\/400167\/",
+        "user" : "majod"
+      }
+    ],
+    "summary" : "Cherry MX Brown switches: a soft bump and a muted clack.",
+    "takes" : 42
+  },
+  {
+    "audio" : "gateron-red.flac",
+    "id" : "gateron-red",
+    "kind" : "Linear",
+    "name" : "Gateron Red",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Typing on a mechanical keyboard",
+        "url" : "https:\/\/freesound.org\/s\/583085\/",
+        "user" : "IRF1010N"
+      }
+    ],
+    "summary" : "Gateron Red switches on a GMMK TKL: dark, smooth and a little hollow.",
+    "takes" : 42
+  },
+  {
+    "audio" : "olivetti.flac",
+    "id" : "olivetti",
+    "kind" : "Typewriter",
+    "name" : "Olivetti",
+    "releases" : false,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "typewriter-olivetti-lettra-22.wav",
+        "url" : "https:\/\/freesound.org\/s\/123344\/",
+        "user" : "keithpeter"
+      },
+      {
+        "license" : "CC0 1.0",
+        "title" : "Typewriter ding_near_mono.wav",
+        "url" : "https:\/\/freesound.org\/s\/406243\/",
+        "user" : "_stubb"
+      }
+    ],
+    "summary" : "Olivetti Lettera 22: a manual portable's snappy typebars and a bell.",
+    "takes" : 25
+  },
+  {
+    "audio" : "model-f.flac",
+    "id" : "model-f",
+    "kind" : "Buckling spring",
+    "name" : "Model F",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "IBM Model F keyboard typing",
+        "url" : "https:\/\/freesound.org\/s\/500430\/",
+        "user" : "Fractal_"
+      }
+    ],
+    "summary" : "An early-1980s IBM Model F XT: buckling springs with a loud, deep clack.",
+    "takes" : 39
+  },
+  {
+    "audio" : "mx-black.flac",
+    "id" : "mx-black",
+    "kind" : "Linear",
+    "name" : "MX Black",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "leopold fc980m pd cherry mx black.flac",
+        "url" : "https:\/\/freesound.org\/s\/628325\/",
+        "user" : "ujonathan"
+      }
+    ],
+    "summary" : "Cherry MX Black switches on a Leopold FC980M PD: heavy, smooth and full-bodied.",
+    "takes" : 43
+  },
+  {
+    "audio" : "selectric.flac",
+    "id" : "selectric",
+    "kind" : "Typewriter",
+    "name" : "Selectric",
+    "releases" : false,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Typewriter, IBM Selectric II",
+        "url" : "https:\/\/freesound.org\/s\/224012\/",
+        "user" : "secretmojo"
+      },
+      {
+        "license" : "CC0 1.0",
+        "title" : "Typewriter bell & carriage reset",
+        "url" : "https:\/\/freesound.org\/s\/345955\/",
+        "user" : "knufds"
+      }
+    ],
+    "summary" : "IBM Selectric II: the electric typeball strike, with a bell on Return.",
+    "takes" : 20
+  },
+  {
+    "audio" : "mx-red.flac",
+    "id" : "mx-red",
+    "kind" : "Linear",
+    "name" : "MX Red",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Keyboard clicking typing Cherry Red Mechanical",
+        "url" : "https:\/\/freesound.org\/s\/499773\/",
+        "user" : "handygaber"
+      }
+    ],
+    "summary" : "Cherry MX Red switches on a Corsair K95: smooth, light and quick.",
+    "takes" : 46
+  },
+  {
+    "audio" : "rainy-75.flac",
+    "id" : "rainy-75",
+    "kind" : "Mechanical",
+    "name" : "Rainy 75",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Typing on a rainy 75",
+        "url" : "https:\/\/freesound.org\/s\/815614\/",
+        "user" : "Techrul"
+      }
+    ],
+    "summary" : "A Rainy 75 keyboard (switches unstated): a dark, creamy thock.",
+    "takes" : 42
+  },
+  {
+    "audio" : "laptop.flac",
+    "id" : "laptop",
+    "kind" : "Butterfly",
+    "name" : "Laptop",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Computer keyboard typing and keystrokes - Apple MacBook Pro 2018",
+        "url" : "https:\/\/freesound.org\/s\/565645\/",
+        "user" : "khenshom"
+      }
+    ],
+    "summary" : "A 2018 MacBook Pro's butterfly keys, close-miked: soft and subtle.",
+    "takes" : 39
+  },
+  {
+    "audio" : "mx-blue.flac",
+    "id" : "mx-blue",
+    "kind" : "Clicky",
+    "name" : "MX Blue",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Mechanical Keyboard 'Cherry Blue Switches'",
+        "url" : "https:\/\/freesound.org\/s\/382057\/",
+        "user" : "EricsSoundschmiede"
+      }
+    ],
+    "summary" : "Cherry MX Blue switches: a crisp click on every press.",
+    "takes" : 46
+  },
+  {
+    "audio" : "leopold.flac",
+    "id" : "leopold",
+    "kind" : "Tactile",
+    "name" : "Leopold",
+    "releases" : true,
+    "sources" : [
+      {
+        "license" : "CC0 1.0",
+        "title" : "Mechanical Keyboard Typing (Treble Version)",
+        "url" : "https:\/\/freesound.org\/s\/450282\/",
+        "user" : "stu556"
+      }
+    ],
+    "summary" : "Leopold FC660M, MX Browns and PBT caps, close-miked: crisp and detailed.",
+    "takes" : 43
+  }
+]

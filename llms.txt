@@ -1,0 +1,74 @@
+# Keyslam
+
+> Keyslam (the Mac keyboard sound app, not the game studio) is a macOS menu-bar app that plays real mechanical keyboard and typewriter recordings as you type. On Apple silicon MacBooks with a motion sensor it measures how hard each key is struck and picks a real strike from that board's soft, medium, hard or slam band. $3.99 one-time (lifetime license), 7-day free trial, macOS 13 Ventura or later. Status: available to download.
+
+## Key facts
+
+- Price: $3.99 USD, one-time payment, lifetime license; free updates
+- Free trial: 7 days, everything unlocked, no account or card
+- Sounds: 15 packs, each cut from a real recording: MX Blue (Clicky), MX Brown (Tactile), MX Red (Linear), MX Black (Linear), Gateron Red (Linear), Topre (Electro-capacitive), Leopold (Tactile), WhiteFox (Tactile), Rainy 75 (Mechanical), Unicomp (Buckling spring), Model F (Buckling spring), Vintage Technics (Linear, modded), Laptop (Butterfly), Selectric (Typewriter), Olivetti (Typewriter)
+- Each pack: cut from one real typing recording; every strike is detected and sorted by natural loudness into four strength bands (soft, medium, hard, and slam = the hardest ~8%), each band leveled. Keyboard packs pair each strike with its key-up and have separate takes for Space/Return/Delete; the typewriter packs have no key-up sounds and play a bell from a second CC0 recording on Return
+- Force sensing: reads the MacBook accelerometer about 800 times a second; supported on MacBook Pro with M1 Pro/M1 Max or later and MacBooks with M2 or later
+- Works on any Mac with macOS 13 Ventura or later (Apple silicon or Intel); without the motion sensor you pick the strength
+- Privacy: the app has no analytics or telemetry and makes no network connections at all; the website uses Google Analytics (cookieless by default in Europe); the license key is Ed25519-signed and verified offline; uses only which key went down to choose a sound; never stores or sends what you type
+- Buying: Stripe Checkout in your browser (seller: Venture Deals, Co.); personal license for all the Macs you own; 14-day refund
+- Recordings: all source recordings are CC0 (public domain) on Freesound, credited on the site
+- Website: https://keyslam.com
+
+## Pages
+
+- [Keyslam home](https://keyslam.com/): Keyslam plays real keyboard and typewriter recordings as you type on a Mac, and on supported MacBooks it feels how hard you hit. $3.99 once, 7-day free trial.
+- [Mechanical Keyboard Sounds for Mac: Real Switch Recordings](https://keyslam.com/mechanical-keyboard-sounds-mac/): Mechanical keyboard sounds for Mac on every keystroke: 15 real recorded switches and typewriters, key-up sounds, stereo. $3.99 once, 7-day free trial.
+- [Mechanical keyboard simulator](https://keyslam.com/keyboard-simulator/): Free mechanical keyboard simulator: click a full on-screen Mac keyboard or type to hear 15 real recorded boards and typewriters. Shareable links, no install.
+- [Keyboard sound test](https://keyslam.com/keyboard-sound-test/): Keyboard sound test with a blind A/B player and measured loudness for 15 real switches and typewriters, plus laptop vs mechanical. Free, in your browser.
+- [MacBook typing sound app](https://keyslam.com/typing-sounds-macbook/): Keyslam adds real keyboard recordings to every MacBook keystroke. Which MacBook Air and Pro models feel how hard you type, plus packs and what it uses.
+- [Typewriter Sound for Mac: Real Selectric and Olivetti Keys](https://keyslam.com/typewriter-sounds-mac/): Make your Mac sound like a typewriter: real IBM Selectric II and Olivetti Lettera 22 recordings, a bell on Return, and force sensing on supported MacBooks.
+- [Force sensing: how it works](https://keyslam.com/force-sensing/): Keyslam reads the MacBook's hidden accelerometer about 800 times a second and plays real soft, medium, hard or slam strikes to match each keystroke.
+- [Keyboard sound packs for Mac](https://keyslam.com/sounds/): 15 keyboard sound packs for Mac, each cut from a real CC0 recording: Cherry MX, Topre, buckling springs, a MacBook, typewriters. Credits and pack.json format.
+- [Cherry MX Blue sound test](https://keyslam.com/sounds/mx-blue/): Cherry MX Blue sound test: play a real CC0 recording of a Cherry board with Blue switches, from soft taps to slams, cut into 46 takes.
+- [Cherry MX Brown sound test](https://keyslam.com/sounds/mx-brown/): Cherry MX Brown sound test: a real CC0 recording by majod, soft to slam, with the tactile bump and no click. See how it was cut into 42 takes.
+- [Cherry MX Red sound test](https://keyslam.com/sounds/mx-red/): Cherry MX Red sound test: a real CC0 recording of a Corsair K95 with Red switches, soft to slam. Hear the smooth linear press and read how it was cut.
+- [Cherry MX Black sound test](https://keyslam.com/sounds/mx-black/): Cherry MX Black sound test: a real CC0 recording of heavy 60 cN linear switches in a Leopold FC980M PD, soft to slam, and MX Black vs MX Red compared.
+- [Gateron Red sound test](https://keyslam.com/sounds/gateron-red/): Gateron Red sound test: a real CC0 recording of a GMMK TKL keyboard, cut into four strength bands, plus Gateron Red vs Cherry MX Red side by side.
+- [Topre (HHKB) sound test](https://keyslam.com/sounds/topre/): Topre sound test on a real HHKB Professional Hybrid: hear the soft thock in four strength bands, compare it with Cherry MX, and see the CC0 source.
+- [Leopold FC660M sound test](https://keyslam.com/sounds/leopold/): Leopold FC660M sound test: a real CC0 recording of MX Browns with enjoyPBT and GMK keycaps, miked from the wrist rest. Four strength bands and the source.
+- [Hako Violet (WhiteFox) sound test](https://keyslam.com/sounds/whitefox/): Hako Violet sound test: a real CC0 recording of a WhiteFox keyboard by the same recordist and mic as our Topre pack. Four strength bands to compare.
+- [Rainy 75 sound test](https://keyslam.com/sounds/rainy-75/): Rainy 75 sound test: hear the Rainy 75 thock, a creamy keyboard sound from an aluminum, gasket-mounted 75%, in a real CC0 recording. Switches unstated.
+- [Unicomp buckling spring sound test](https://keyslam.com/sounds/unicomp/): Buckling spring keyboard sound test: a real CC0 recording of a Unicomp, built on IBM's Model M design. Play soft taps to slams, then compare it with a Model F.
+- [IBM Model F sound test](https://keyslam.com/sounds/model-f/): IBM Model F keyboard sound: a real CC0 recording of an early-1980s Model F XT, capacitive buckling springs played online, and how it differs from a Model M.
+- [Gateron Yellow (Vintage Technics) sound test](https://keyslam.com/sounds/vintage-technics/): Gateron Yellow sound test: real lubed, black-bottom Gateron Yellows with MX tops in a vintage Technics board. CC0 recording, four strength bands.
+- [MacBook butterfly keyboard sound test](https://keyslam.com/sounds/laptop/): MacBook keyboard sound test: a close-up CC0 recording of a 2018 MacBook Pro butterfly keyboard in four strength bands, and which MacBooks have butterfly keys.
+- [IBM Selectric II sound test](https://keyslam.com/sounds/selectric/): IBM Selectric typewriter sound: a real Correcting Selectric II recording (CC0), its strikes sorted into four strength bands, with a separate bell on Return.
+- [Olivetti Lettera 22 sound test](https://keyslam.com/sounds/olivetti/): Olivetti Lettera 22 sound: a real CC0 recording of the manual portable, its snappy typebar strikes in four strength bands, and a typewriter ding on Return.
+- [Best keyboard sound app for Mac: all apps compared](https://keyslam.com/compare/): 18 Mac keyboard sound apps compared with sources: price, trial, Intel and macOS support, force sensing, telemetry. Haptyk, Klack, TapNoise, Mechvibes, more.
+- [Klack alternative](https://keyslam.com/alternatives/klack/): Klack specs checked November 2, 2026: $4.99, macOS 15+, 7 switch sets, no trial. Keyslam runs on macOS 13+ for $3.99 with a 7-day trial and force sensing.
+- [Haptyk alternative](https://keyslam.com/alternatives/haptyk/): Haptyk and Keyslam both read the MacBook motion sensor. The differences: $3.99 vs $8, a 7-day trial vs 3, any Mac on macOS 13+, and no network use.
+- [TapNoise alternative](https://keyslam.com/alternatives/tapnoise/): TapNoise costs $14.99 after launch pricing, has had no trial since 0.2.5 and needs macOS 14. Keyslam: $3.99 once, a 7-day trial, macOS 13+, your own packs.
+- [Mechvibes alternative for Mac](https://keyslam.com/alternatives/mechvibes/): Mechvibes on Mac, checked Nov 2026: an experimental, unnotarized build, two permissions, a launch ping. Is it safe, Mechvibes vs Klack, and an alternative.
+- [KeyEcho alternative for Mac](https://keyslam.com/alternatives/keyecho/): KeyEcho is free with 18 packs; 53 more cost $3.99 each or $9.99 for all. What each app costs for the sounds you want, plus trials and refunds.
+- [Blog](https://keyslam.com/blog/): Guides to keyboard sounds on Mac: switch types, thocky vs clacky, privacy and how to make a MacBook sound like a mechanical keyboard.
+- [How to make your MacBook sound like a mechanical keyboard](https://keyslam.com/blog/make-macbook-sound-like-mechanical-keyboard/): Make a MacBook Air or Pro sound like a mechanical keyboard: 6 setup steps, how to change the sound, free options, and what a sound app can't change.
+- [Mechanical keyboard sound types, explained](https://keyslam.com/blog/mechanical-keyboard-sound-types/): How clicky, tactile, linear, buckling-spring, Topre, laptop and typewriter keys make their sound, what the case and keycaps change, with real recordings to play.
+- [Thocky vs clacky vs creamy keyboards](https://keyslam.com/blog/thocky-vs-clacky-keyboard-sound/): What thocky, clacky, creamy and poppy mean, what makes a keyboard sound each way (keycaps, plate, case, lube, foam), and real boards to hear each one.
+- [Is Input Monitoring safe on Mac?](https://keyslam.com/blog/is-input-monitoring-safe-mac/): What macOS Input Monitoring lets an app see, how a keyboard sound app differs from a keylogger, and how to review, revoke or test any app in minutes.
+- [Keyslam pricing](https://keyslam.com/pricing/): Keyslam costs $3.99 once for all the Macs you own. Try the keyboard sound app free for 7 days, no account or card. Full refund within 14 days.
+- [Download Keyslam](https://keyslam.com/download/): Download Keyslam 1.0.1 for Mac: one notarized universal .dmg, macOS 13 Ventura or later. Free 7-day trial, then $3.99 once. Install steps.
+- [Keyslam FAQ](https://keyslam.com/faq/): Straight answers about Keyslam: AirPods, calls, shortcuts, mouse clicks, Windows, the Mac App Store, internet access and volume. Checked against the app.
+- [Keyslam privacy policy](https://keyslam.com/privacy/): The Keyslam app makes no network connections and has no analytics. What stays on your Mac, what the website's analytics and forms collect, and how Stripe handles payment.
+- [Keyboard sounds for Intel Mac, iMac and Mac mini](https://keyslam.com/keyboard-sounds-intel-mac/): Keyslam runs on any Mac with macOS 13 Ventura or later: Intel Macs, iMac, Mac mini, Mac Studio and the M1 MacBook Air. What works without a motion sensor.
+- [Mechvibes not working on Mac? Fixes](https://keyslam.com/blog/mechvibes-not-working-mac/): Fixes for Mechvibes 3 on macOS: “can't be opened” or “damaged”, permissions lost after updates, no sound, delay, Intel Macs, Homebrew and pack ZIPs.
+- [Thock for Mac: which Thock is which](https://keyslam.com/alternatives/thock/): Two unrelated Mac apps are called Thock: a free open-source one (thockapp.com) and a $4.99 App Store app (thock.pro). How to tell them apart.
+- [Free keyboard sound apps for Mac](https://keyslam.com/free-keyboard-sound-apps-mac/): Every free keyboard sound app for Mac we found: Mechvibes, KeyEcho, open-source Thock, Keyboard Sounds Pro, Clank Keys and more, with each one's catch.
+- [Haptyk vs TapNoise](https://keyslam.com/compare/haptyk-vs-tapnoise/): TapNoise is $14.99 for 1 Mac or $20.99 for 2. Haptyk is $8 for 3 sensor MacBooks. Keyslam is $3.99 once for every Mac you own, with a 7-day trial.
+- [Why your Mac makes a sound when you type, and how to turn it off](https://keyslam.com/blog/mac-keyboard-click-sounds-on-off/): macOS has no everyday key-click setting for the Mac keyboard. Find which of 7 things makes your Mac's typing sounds, switch each one off, or turn clicks on.
+- [Opera GX keyboard sounds on Mac](https://keyslam.com/blog/opera-gx-keyboard-sounds-mac/): Opera GX's keyboard sounds only play while you type in the browser. Set them up on a Mac, see why they stop in other apps, and get sounds everywhere.
+- [Which MacBooks have an accelerometer?](https://keyslam.com/blog/which-macbooks-have-an-accelerometer/): Which MacBook Air and MacBook Pro models have the hidden motion sensor, with model identifiers, a tested Terminal check, and the apps that use it.
+- [Cherry MX Blue vs Brown vs Red: hear all three](https://keyslam.com/blog/cherry-mx-blue-vs-brown-vs-red-sound/): Play real Cherry MX Blue, Brown and Red recordings back to back, from soft to slam, with Cherry's switch specs, our measurements and the quietest pick.
+- [ASMR keyboard sounds for Mac](https://keyslam.com/asmr-keyboard-sounds-mac/): Real keyboard and typewriter recordings for ASMR typing on a Mac: which boards suit it, settings for clean takes, and how to capture them in OBS or QuickTime.
+- [Free keyboard sound effects (CC0)](https://keyslam.com/keyboard-sound-effects/): Free CC0 keyboard typing and typewriter sound effects: Freesound recordings of Cherry MX, Topre, buckling springs, a MacBook and an IBM Selectric.
+- [Typing test with sound](https://keyslam.com/typing-test-with-sound/): Free 15, 30 or 60-second typing test with sound: every key plays a real mechanical keyboard or typewriter recording. Live WPM and accuracy, no install.
+- [About Keyslam](https://keyslam.com/about/): Keyslam, the Mac keyboard sound app, is made by Samson and sold by Venture Deals, Co. How each pack is cut from one CC0 recording into four strength bands.
+- [Keyslam release notes](https://keyslam.com/changelog/): Keyslam release notes, newest first. Version 1.0.1 (released, November 2, 2026): what's in each build and what isn't yet.
+- [Contact Keyslam](https://keyslam.com/contact/): Contact Keyslam support about sounds, licenses, refunds or press. Recover a lost license key with your Stripe receipt number. Replies come by email.
+- [No sound from Keyslam? Fixes](https://keyslam.com/help/no-sound/): Keyboard sounds stopped on your Mac? Fix Keyslam step by step: Input Monitoring after macOS updates, output and volume, AirPods delay, the trial, custom packs.
+- [Keyslam press kit](https://keyslam.com/press/): Keyslam press kit: fact sheet, 50- and 100-word boilerplate, logo, menu screenshots, keycap art and a founder quote for the Mac keyboard sound app.

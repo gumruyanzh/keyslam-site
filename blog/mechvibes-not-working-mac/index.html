@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Mechvibes Not Working on Mac? Fix No Sound and Gatekeeper</title>
+<meta name="description" content="Fixes for Mechvibes 3 on macOS: “can&#x27;t be opened” or “damaged”, permissions lost after updates, no sound, delay, Intel Macs, Homebrew and pack ZIPs.">
+<link rel="canonical" href="https://keyslam.com/blog/mechvibes-not-working-mac/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:site_name" content="Keyslam"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:title" content="Mechvibes Not Working on Mac? Fix No Sound and Gatekeeper"><meta property="og:description" content="Fixes for Mechvibes 3 on macOS: “can&#x27;t be opened” or “damaged”, permissions lost after updates, no sound, delay, Intel Macs, Homebrew and pack ZIPs."><meta property="og:url" content="https://keyslam.com/blog/mechvibes-not-working-mac/"><meta property="og:image" content="https://keyslam.com/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Keyslam: real mechanical keyboard sounds for Mac">
+<meta property="article:published_time" content="2026-11-02"><meta property="article:modified_time" content="2026-11-02">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Mechvibes Not Working on Mac? Fix No Sound and Gatekeeper"><meta name="twitter:description" content="Fixes for Mechvibes 3 on macOS: “can&#x27;t be opened” or “damaged”, permissions lost after updates, no sound, delay, Intel Macs, Homebrew and pack ZIPs."><meta name="twitter:image" content="https://keyslam.com/assets/og.png">
+<link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" type="image/png" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/icon.png">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-3b58e8.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/figtree-latin-f96cbb.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 600 800; font-stretch: 100%; font-display: swap; src: url(/assets/fonts/bricolage-grotesque-latin-ext-10d6a5.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 600 800; font-stretch: 100%; font-display: swap; src: url(/assets/fonts/bricolage-grotesque-latin-3b58e8.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family: 'Figtree'; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/figtree-latin-ext-7471c0.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family: 'Figtree'; font-style: normal; font-weight: 400; font-display: swap; src: url(/assets/fonts/figtree-latin-f96cbb.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family: 'Figtree'; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/figtree-latin-ext-7471c0.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family: 'Figtree'; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/figtree-latin-f96cbb.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family: 'Figtree'; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/figtree-latin-ext-7471c0.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family: 'Figtree'; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/figtree-latin-f96cbb.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family: 'Figtree'; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/figtree-latin-ext-7471c0.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family: 'Figtree'; font-style: normal; font-weight: 700; font-display: swap; src: url(/assets/fonts/figtree-latin-f96cbb.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/ibm-plex-mono-latin-ext-25040c.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/ibm-plex-mono-latin-a80b2c.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+</style>
+<style>/* Layout: an airy product page built around rendered keycaps; one showcase key that reacts to your typing. */
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --stage: #eef0f3;
+  --ink: #15171c;
+  --muted: #626977;
+  --line: #e2e4e9;
+  --accent: #0d8a7b;
+  --accent-text: #0b7468;
+  --accent-ink: #ffffff;
+  --primary: #15171c;
+  --primary-ink: #ffffff;
+  --soft: #3b8fd0;
+  --medium: #0d8a7b;
+  --hard: #d68a1a;
+  --slam: #e0392d;
+  --shadow: rgba(18, 24, 38, 0.10);
+  --shadow-strong: rgba(18, 24, 38, 0.22);
+
+  --display: "Bricolage Grotesque", "Avenir Next", "Helvetica Neue", system-ui, sans-serif;
+  --body: "Figtree", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.1875rem;
+  --step-3: clamp(2rem, 4.2vw, 3rem);
+  --step-4: clamp(2.8rem, 6.6vw, 5.2rem);
+  --r-card: 26px;
+  --r-tile: 18px;
+  --wrap: 1160px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e0f12; --surface: #18191e; --stage: #1f2127; --ink: #f1f2f5; --muted: #9ba1ad; --line: #2a2c33;
+    --accent: #3cc2ae; --accent-text: #3cc2ae; --accent-ink: #06201c; --primary: #f1f2f5; --primary-ink: #0e0f12;
+    --soft: #62aef0; --medium: #3cc2ae; --hard: #f0a93a; --slam: #ff5a4c;
+    --shadow: rgba(0, 0, 0, 0.35); --shadow-strong: rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e0f12; --surface: #18191e; --stage: #1f2127; --ink: #f1f2f5; --muted: #9ba1ad; --line: #2a2c33;
+  --accent: #3cc2ae; --accent-text: #3cc2ae; --accent-ink: #06201c; --primary: #f1f2f5; --primary-ink: #0e0f12;
+  --soft: #62aef0; --medium: #3cc2ae; --hard: #f0a93a; --slam: #ff5a4c;
+  --shadow: rgba(0, 0, 0, 0.35); --shadow-strong: rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: var(--step-0); line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+a { color: inherit; }
+img { display: block; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap {
+  max-width: var(--wrap); margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+h1 { font-size: var(--step-4); font-weight: 800; line-height: 0.98; letter-spacing: -0.035em; }
+h1 em { font-style: normal; color: var(--accent); }
+h2 { font-size: var(--step-3); font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; }
+h3 { font-weight: 700; letter-spacing: -0.015em; }
+p { margin: 0; }
+.eyebrow { font-weight: 700; font-size: var(--step--1); color: var(--accent-text, var(--accent)); letter-spacing: 0.01em; }
+.mono { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.lede { font-size: var(--step-1); color: var(--muted); max-width: 34rem; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; cursor: pointer;
+  font: 600 var(--step-0)/1 var(--body); padding: 0.9rem 1.25rem; border-radius: 999px;
+  border: 1px solid transparent; background: var(--primary); color: var(--primary-ink);
+  box-shadow: 0 8px 20px -10px var(--shadow-strong);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(1px); }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: none; padding-inline: 0.4rem; }
+.btn.outline { background: var(--surface); color: var(--ink); border-color: var(--line); box-shadow: none; }
+.btn[aria-disabled="true"] { cursor: default; }
+.btn small { font-weight: 500; opacity: 0.7; }
+
+/* Nav */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: saturate(1.5) blur(14px); -webkit-backdrop-filter: saturate(1.5) blur(14px); }
+.nav-in { display: flex; align-items: center; gap: 1.5rem; padding-block: 0.75rem; }
+.brand { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; font: 800 1.15rem/1 var(--display); letter-spacing: -0.02em; }
+.brand img { width: 30px; height: 30px; border-radius: 8px; }
+.nav-links { display: flex; gap: 1.4rem; margin-left: auto; font-size: 0.92rem; }
+.nav-links a { text-decoration: none; color: var(--muted); }
+.nav-links a:hover { color: var(--ink); }
+.nav .btn { padding: 0.62rem 1rem; font-size: 0.9rem; }
+@media (max-width: 980px) { .nav-in { gap: 1rem; } .nav-links { gap: 0.95rem; font-size: 0.86rem; } }
+@media (max-width: 760px) { .nav-links { display: none; } .nav .btn { margin-left: auto; } }
+
+/* Hero */
+.hero { padding-block: clamp(2rem, 5vw, 4rem) clamp(2.5rem, 6vw, 5rem); }
+.hero-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: center; }
+.hero-copy { display: grid; gap: 1.4rem; justify-items: start; }
+.pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem 0.4rem 0.45rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: 0.85rem; color: var(--muted); }
+.pill b { background: var(--accent); color: var(--accent-ink); font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 999px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; }
+.fine { font-size: 0.85rem; color: var(--muted); }
+.cluster { position: relative; aspect-ratio: 1 / 0.86; width: 100%; max-width: 560px; justify-self: center; }
+.cluster::before { content: ""; position: absolute; inset: 14% 14% 10%; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--pack, var(--accent)) 32%, transparent), transparent 68%); transition: background 300ms ease; }
+.cluster button { position: absolute; padding: 0; border: 0; background: none; cursor: pointer; animation: float 6s ease-in-out infinite; }
+.cluster img { width: 100%; height: auto; filter: drop-shadow(0 18px 18px var(--shadow-strong)); transition: transform 140ms ease; }
+.cluster button:hover img { transform: translateY(-4px) rotate(-2deg); }
+.cluster .main { left: 27%; top: 20%; width: 46%; animation-duration: 7s; z-index: 2; }
+.cluster .main.hit img { transform: translateY(8px) scale(0.98); transition-duration: 60ms; }
+.cluster .s1 { left: 2%; top: 4%; width: 25%; animation-delay: -1s; }
+.cluster .s2 { right: 3%; top: 0%; width: 23%; animation-delay: -2.5s; }
+.cluster .s3 { left: 0%; bottom: 6%; width: 24%; animation-delay: -4s; }
+.cluster .s4 { right: 0%; bottom: 4%; width: 27%; animation-delay: -3s; }
+.cluster .s5 { left: 40%; bottom: -4%; width: 19%; animation-delay: -5s; }
+@keyframes float { 50% { transform: translateY(-9px); } }
+@media (max-width: 880px) { .hero-in { grid-template-columns: 1fr; } .cluster { max-width: 460px; } }
+
+/* Try it */
+.section { padding-block: clamp(3.5rem, 8vw, 6rem); }
+.section-head { display: grid; gap: 0.7rem; max-width: 44rem; margin-bottom: clamp(1.75rem, 4vw, 2.5rem); }
+.section-head p:last-child { color: var(--muted); font-size: var(--step-1); }
+.try { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); gap: clamp(1rem, 2.5vw, 1.75rem); align-items: start; }
+@media (max-width: 920px) { .try { grid-template-columns: 1fr; } }
+.card { background: var(--surface); border-radius: var(--r-card); border: 1px solid var(--line); box-shadow: 0 1px 2px var(--shadow), 0 24px 48px -32px var(--shadow-strong); }
+.show { padding: clamp(0.9rem, 2vw, 1.25rem); display: grid; gap: 1.1rem; }
+.stage {
+  position: relative; aspect-ratio: 16 / 10.5; border-radius: 20px; overflow: hidden; display: grid; place-items: center; cursor: pointer;
+  background: radial-gradient(120% 90% at 50% 62%, color-mix(in srgb, var(--pack) 30%, var(--stage)) 0%, color-mix(in srgb, var(--pack) 10%, var(--stage)) 48%, var(--stage) 100%);
+  transition: background 300ms ease; touch-action: manipulation; user-select: none; -webkit-user-select: none;
+}
+.stage img { width: min(62%, 300px); height: auto; filter: drop-shadow(0 22px 22px var(--shadow-strong)); transition: transform 130ms cubic-bezier(.2,.9,.3,1.4); position: relative; z-index: 1; }
+.stage.hit img { transform: translateY(10px) scale(0.975); transition: transform 45ms ease-out; }
+.ring { position: absolute; left: 50%; top: 56%; width: 60%; aspect-ratio: 2.2 / 1; border-radius: 50%; border: 3px solid var(--ring, var(--accent)); transform: translate(-50%, -50%) scale(0.6); opacity: 0.9; pointer-events: none; animation: ring 620ms ease-out forwards; }
+@keyframes ring { to { transform: translate(-50%, -50%) scale(var(--grow, 1.2)); opacity: 0; } }
+.stage .hint { position: absolute; left: 12px; bottom: 12px; z-index: 2; font-size: 0.78rem; color: var(--muted); background: color-mix(in srgb, var(--surface) 80%, transparent); padding: 0.3rem 0.6rem; border-radius: 999px; }
+.who { display: grid; gap: 0.25rem; padding-inline: 0.3rem; }
+.who h3 { font-size: 1.7rem; }
+.who p { color: var(--muted); }
+.who a { font-size: 0.85rem; color: var(--muted); text-decoration-color: var(--line); }
+.box { position: relative; }
+.box textarea {
+  width: 100%; min-height: 6.5rem; resize: none; padding: 0.9rem 1rem 2.6rem; border-radius: 16px;
+  border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); font: 500 1.02rem/1.45 var(--body);
+}
+.box textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
+.toggle { position: absolute; right: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 0.4rem; border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 999px; padding: 0.35rem 0.7rem; font: 600 0.8rem/1 var(--body); cursor: pointer; }
+.toggle[aria-pressed="false"] { color: var(--slam); }
+.strength { display: grid; gap: 0.6rem; }
+.strength-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem; }
+.seg { display: inline-flex; max-width: 100%; padding: 3px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { padding: 0.45rem 0.75rem; border-radius: 999px; font: 600 0.82rem/1 var(--body); color: var(--muted); cursor: pointer; }
+.seg input:checked + label { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px var(--shadow-strong); }
+.seg input:focus-visible + label { outline: 2px solid var(--accent); }
+@media (max-width: 420px) { .seg label { padding: 0.45rem 0.5rem; font-size: 0.76rem; } }
+.vol { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.82rem; }
+.vol input { width: 110px; accent-color: var(--accent); }
+.meter { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.meter i { height: 6px; border-radius: 3px; background: var(--line); position: relative; overflow: hidden; }
+.meter i::after { content: ""; position: absolute; inset: 0; width: var(--fill, 0%); background: var(--c); transition: width 120ms ease-out; }
+.meter i:nth-child(1) { --c: var(--soft); } .meter i:nth-child(2) { --c: var(--medium); } .meter i:nth-child(3) { --c: var(--hard); } .meter i:nth-child(4) { --c: var(--slam); }
+.meter-label { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--muted); }
+.note { font-size: 0.8rem; color: var(--muted); }
+.note[data-tone="error"] { color: var(--slam); }
+
+.picker { display: grid; gap: 0.8rem; }
+.picker-head { display: flex; justify-content: space-between; align-items: baseline; }
+.picker-head h3 { font-size: 1.05rem; color: var(--muted); font-family: var(--body); font-weight: 700; letter-spacing: 0; }
+.tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.65rem; }
+.tile {
+  display: grid; justify-items: center; align-content: start; gap: 0.25rem; padding: 0.7rem 0.4rem 0.75rem; border-radius: var(--r-tile); cursor: pointer;
+  background: var(--surface); border: 1.5px solid var(--line); color: var(--ink); font: inherit; text-align: center;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+.tile:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -16px var(--shadow-strong); }
+.tile img { width: 76%; max-width: 92px; aspect-ratio: 1; height: auto; filter: drop-shadow(0 8px 8px var(--shadow)); }
+.tile strong { font-size: 0.9rem; line-height: 1.15; }
+.tile span { font-size: 0.68rem; color: var(--muted); line-height: 1.2; }
+.tile[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+/* Phones: 15 boards as 5 rows of 3 (2 columns left an orphan and pushed the controls ~1,300px down). */
+@media (max-width: 560px) {
+  .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+  .tile { padding: 0.6rem 0.25rem 0.65rem; gap: 0.2rem; }
+  .tile img { width: 72%; max-width: 76px; }
+  .tile strong { font-size: 0.84rem; }
+  .tile span { font-size: 0.66rem; }
+}
+.about { padding: 1.1rem 1.2rem; display: grid; gap: 0.35rem; }
+.controls-card { padding: 1.1rem 1.2rem; display: grid; gap: 0.85rem; }
+.controls-head { display: flex; justify-content: space-between; align-items: baseline; }
+.about p { color: var(--muted); font-size: 0.92rem; }
+
+/* Force */
+.force { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(1.5rem, 5vw, 3.5rem); align-items: center; }
+@media (max-width: 880px) { .force { grid-template-columns: 1fr; } }
+.force-copy { display: grid; gap: 1rem; }
+.force-copy p { color: var(--muted); max-width: 58ch; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; margin-top: 0.4rem; }
+@media (max-width: 460px) { .facts { grid-template-columns: 1fr; } }
+.fact { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 0.85rem 0.9rem; display: grid; gap: 0.1rem; }
+.fact strong { font: 800 1.5rem/1.1 var(--display); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.fact span { font-size: 0.8rem; color: var(--muted); }
+.lab { padding: clamp(1rem, 2.5vw, 1.5rem); display: grid; gap: 1rem; }
+.lab svg { width: 100%; height: auto; }
+.lab .axis { stroke: var(--line); stroke-width: 1; }
+.lab .tick { fill: var(--muted); font: 500 12px var(--mono); }
+.lab .tier { font: 700 12.5px var(--body); letter-spacing: 0.04em; }
+.lab .marker { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.lab-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 1rem; }
+.lab-row input { flex: 1 1 180px; accent-color: var(--accent); }
+.readout { font-size: 0.88rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.strike { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.9rem 0.35rem 0.35rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 700 0.92rem/1 var(--body); cursor: pointer; }
+.strike img { width: 38px; height: 38px; transition: transform 70ms ease; }
+.strike:active img { transform: translateY(3px) scale(0.95); }
+
+/* Specs */
+.specs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }
+@media (max-width: 960px) { .specs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .specs { grid-template-columns: 1fr; } }
+.spec { padding: 1.2rem; display: grid; gap: 0.4rem; align-content: start; }
+.spec h3 { font-size: 1.1rem; }
+.spec p { color: var(--muted); font-size: 0.93rem; }
+
+/* Pricing */
+.price { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 2rem; align-items: center; }
+@media (max-width: 880px) { .price { grid-template-columns: 1fr; } }
+.tag { padding: clamp(1.4rem, 3vw, 2.2rem); display: grid; gap: 1.2rem; }
+.amount { display: flex; align-items: baseline; gap: 0.6rem; }
+.amount strong { font: 800 clamp(3rem, 7vw, 4.4rem)/1 var(--display); letter-spacing: -0.04em; }
+.amount span { color: var(--muted); }
+.checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
+.checks li { display: grid; grid-template-columns: 1.3rem minmax(0, 1fr); gap: 0.4rem; }
+.checks li::before { content: "✓"; color: var(--accent); font-weight: 800; }
+
+/* FAQ */
+.faq { max-width: 50rem; padding: 0.4rem 1.4rem; }
+.faq details { border-top: 1px solid var(--line); padding-block: 1.05rem; }
+.faq details:first-child { border-top: 0; }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 1rem; font-weight: 700; font-size: 1.08rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--muted); font-weight: 500; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { margin-top: 0.55rem; color: var(--muted); max-width: 64ch; }
+
+/* Credits & footer */
+.credits { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 0.2rem 2rem; font-size: 0.9rem; color: var(--muted); }
+.credits li { padding-block: 0.5rem; border-top: 1px solid var(--line); }
+.credits b { color: var(--ink); }
+.closing { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; padding: clamp(1.5rem, 4vw, 2.5rem); }
+footer { padding-block: 2rem 2.6rem; color: var(--muted); font-size: var(--step--1); }
+.foot { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
+.foot nav { display: flex; gap: 1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cluster button { animation: none; }
+  .ring { display: none; }
+  .tile, .btn, .stage img, .cluster img { transition: none; }
+}
+
+/* ---- Subpages ---- */
+.crumbs { font-size: 0.82rem; color: var(--muted); padding-top: 1.2rem; }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0; padding: 0; }
+.crumbs li + li::before { content: "›"; margin-right: 0.35rem; color: var(--line); }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--ink); }
+.page-hero { padding-block: clamp(1.5rem, 4vw, 3rem) clamp(1.5rem, 4vw, 2.5rem); }
+.page-hero-in { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); gap: 2rem; align-items: center; }
+.page-hero-in > div { display: grid; gap: 1.1rem; justify-items: start; }
+.page-hero h1 { font-size: clamp(2.3rem, 5.2vw, 4rem); }
+.page-hero .key-art { width: 100%; height: auto; max-width: 300px; justify-self: center; filter: drop-shadow(0 22px 22px var(--shadow-strong)); }
+@media (max-width: 760px) { .page-hero-in { grid-template-columns: 1fr; } .page-hero .key-art { max-width: 200px; } }
+.updated { font-size: 0.8rem; color: var(--muted); }
+.answer { font-size: var(--step-1); color: var(--ink); max-width: 46rem; }
+
+.facts-box { padding: 1.2rem 1.3rem; display: grid; gap: 0.2rem; }
+.facts-box h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+.facts-box dl { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem 1.4rem; }
+.facts-box dl div { display: grid; gap: 0.1rem; min-width: 0; }
+.facts-box dt { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.facts-box dd { margin: 0; font-weight: 600; }
+@media (max-width: 760px) { .facts-box dl { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .facts-box dl { grid-template-columns: 1fr; } }
+
+.prose { max-width: 46rem; display: grid; gap: 1rem; }
+.prose h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-top: 1.4rem; }
+.prose h3 { font-size: 1.25rem; margin-top: 0.6rem; }
+.prose p, .prose li { color: var(--muted); font-size: 1.05rem; }
+.prose p strong, .prose li strong { color: var(--ink); }
+.prose ul, .prose ol { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.45rem; }
+.prose a { color: var(--accent); text-underline-offset: 2px; }
+.stack { display: grid; gap: clamp(1.5rem, 4vw, 2.5rem); }
+
+.table-wrap { overflow-x: auto; border-radius: 18px; border: 1px solid var(--line); background: var(--surface); }
+.cmp { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 640px; }
+.cmp th, .cmp td { text-align: left; padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.cmp thead th { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
+.cmp tbody tr:last-child td { border-bottom: 0; }
+.cmp td:first-child { font-weight: 700; white-space: nowrap; }
+.cmp tr.us td { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+.cmp .yes { color: var(--accent); font-weight: 700; }
+.cmp .src { color: var(--muted); font-size: 0.8rem; }
+.sources { font-size: 0.82rem; color: var(--muted); }
+.sources a { color: var(--muted); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 0.9rem; }
+.link-card { display: grid; gap: 0.35rem; padding: 1.1rem 1.15rem; text-decoration: none; color: var(--ink); transition: transform 140ms ease, box-shadow 140ms ease; }
+.link-card:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -18px var(--shadow-strong); }
+.link-card img { width: 72px; height: 72px; filter: drop-shadow(0 8px 8px var(--shadow)); }
+.link-card strong { font-family: var(--display); font-size: 1.15rem; letter-spacing: -0.01em; }
+.link-card span { color: var(--muted); font-size: 0.9rem; }
+.packs-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 960px) { .packs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Phones: compact centred cards, 3 across, so 15 packs make 5 rows instead of 8 with an orphan. */
+@media (max-width: 560px) {
+  .packs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+  .packs-grid .link-card { justify-items: center; align-content: start; text-align: center; gap: 0.2rem; padding: 0.75rem 0.3rem 0.8rem; }
+  .packs-grid .link-card img { width: 56px; height: 56px; }
+  .packs-grid .link-card strong { font-size: 0.95rem; line-height: 1.15; }
+  .packs-grid .link-card span { font-size: 0.7rem; line-height: 1.2; }
+}
+
+.play { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.85rem 0.45rem 0.45rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 700 0.88rem/1 var(--body); cursor: pointer; }
+.play img { width: 30px; height: 30px; }
+.play:hover { border-color: var(--accent); }
+.play-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 0.8rem; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 0.8rem; align-items: start; color: var(--muted); }
+.steps li::before { content: counter(step); display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 800; }
+.steps strong { color: var(--ink); }
+.cta-band { padding: clamp(1.4rem, 4vw, 2.2rem); display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; justify-content: space-between; }
+.cta-band p { color: var(--muted); max-width: 36rem; }
+
+.foot-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; padding-bottom: 1.6rem; margin-bottom: 1.4rem; border-bottom: 1px solid var(--line); }
+.foot-cols h2 { font-family: var(--body); font-size: 0.85rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0; }
+.foot-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.foot-cols a { color: var(--muted); text-decoration: none; }
+.foot-cols a:hover { color: var(--ink); }
+@media (max-width: 760px) { .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* First-party forms (notify, contact, recover) */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.notify { display: grid; gap: 0.6rem; padding: clamp(1.2rem, 3vw, 1.8rem); }
+.ks-form { display: grid; gap: 0.6rem; max-width: 34rem; }
+.notify .ks-form { grid-template-columns: minmax(0, 1fr) auto; align-items: center; max-width: 40rem; }
+.notify .ks-form .ks-check, .notify .ks-form .ks-status { grid-column: 1 / -1; }
+.ks-form input[type=email], .ks-form input:not([type]), .ks-form select, .ks-form textarea {
+  font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 0.7rem 0.85rem; min-width: 0; width: 100%; box-sizing: border-box; }
+.ks-form input:focus-visible, .ks-form select:focus-visible, .ks-form textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.ks-check { display: flex; gap: 0.5rem; align-items: center; font-size: 0.92rem; color: var(--muted); }
+.ks-status { margin: 0; min-height: 1.3em; font-size: 0.92rem; color: var(--muted); }
+.ks-status[data-tone=error] { color: #c2410c; }
+.ks-status[data-tone=ok] { color: var(--accent); }
+.ks-key { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.85rem; }
+@media (max-width: 560px) { .notify .ks-form { grid-template-columns: 1fr; } }
+.btn small { font-weight: 500; opacity: 0.8; }
+
+/* Analytics choice banner (website/src/analytics.js), shown only in European time zones */
+.consent {
+  position: fixed; z-index: 50; left: 50%; transform: translateX(-50%);
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  width: min(640px, calc(100% - 2 * max(16px, env(safe-area-inset-left, 0px))));
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; padding: 0.9rem 1rem;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: var(--r-tile);
+  box-shadow: 0 12px 32px var(--shadow-strong); font-size: 0.92rem;
+}
+.consent p { margin: 0; flex: 1 1 260px; min-width: 0; color: var(--muted); }
+.consent a { color: var(--accent-text); }
+.consent-actions { display: flex; gap: 0.5rem; margin-left: auto; }
+.consent .btn { padding: 0.55rem 1rem; font-size: 0.9rem; }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://keyslam.com/blog/mechvibes-not-working-mac/#webpage","url":"https://keyslam.com/blog/mechvibes-not-working-mac/","name":"Mechvibes Not Working on Mac? Fix No Sound and Gatekeeper","description":"Fixes for Mechvibes 3 on macOS: “can't be opened” or “damaged”, permissions lost after updates, no sound, delay, Intel Macs, Homebrew and pack ZIPs.","inLanguage":"en-US","isPartOf":{"@type":"WebSite","@id":"https://keyslam.com/#website","name":"Keyslam","url":"https://keyslam.com/"},"publisher":{"@id":"https://keyslam.com/#organization"},"dateModified":"2026-11-02","primaryImageOfPage":{"@type":"ImageObject","url":"https://keyslam.com/assets/og.png"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Mechvibes Not Working on Mac? Fix No Sound and Gatekeeper","description":"Fixes for Mechvibes 3 on macOS: “can't be opened” or “damaged”, permissions lost after updates, no sound, delay, Intel Macs, Homebrew and pack ZIPs.","datePublished":"2026-11-02","dateModified":"2026-11-02","author":{"@type":"Person","name":"Samson","jobTitle":"Founder","worksFor":{"@id":"https://keyslam.com/#organization"}},"publisher":{"@id":"https://keyslam.com/#organization"},"mainEntityOfPage":"https://keyslam.com/blog/mechvibes-not-working-mac/","image":"https://keyslam.com/assets/og.png"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Set up Mechvibes 3 on a Mac","description":"Install Mechvibes 3 on an Apple silicon Mac and give it the two permissions it needs.","step":[{"@type":"HowToStep","position":1,"name":"Download the right file","text":"Get the Apple silicon DMG (v3.4.0, 52.0 MB) from mechvibes.com/download. There's no Intel build yet."},{"@type":"HowToStep","position":2,"name":"Drag Mechvibes to Applications","text":"Open the DMG and drag the app into your Applications folder."},{"@type":"HowToStep","position":3,"name":"Open it, then allow it in Privacy & Security","text":"macOS blocks the first launch because the build isn't notarized. Fix 1 below shows how to allow it."},{"@type":"HowToStep","position":4,"name":"Turn on Accessibility and Input Monitoring","text":"Mechvibes needs both, in System Settings › Privacy & Security."},{"@type":"HowToStep","position":5,"name":"Quit and reopen Mechvibes, then pick a pack","text":"The permissions take effect on the next launch. Type in any app to test it."}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is Mechvibes not working on my Mac?","acceptedAnswer":{"@type":"Answer","text":"Usually one of these: macOS blocked it because it isn't notarized (Fix 1), Accessibility or Input Monitoring is off (Fix 2), an update invalidated those permissions (Fix 3), or the sound is going to another output (Fix 4). On an Intel Mac, there's no build yet (Fix 5)."}},{"@type":"Question","name":"Does Mechvibes work on Apple silicon and Intel Macs?","acceptedAnswer":{"@type":"Answer","text":"Apple silicon, yes: version 3.4.0 has an Apple silicon build, marked experimental. Intel, not yet. GitHub issue 128 says an Intel build is merged and ships with the next release."}},{"@type":"Question","name":"Why does Mechvibes stop working after every update?","acceptedAnswer":{"@type":"Answer","text":"Because macOS treats each new ad-hoc signed build as a different app. Its README says you have to remove and re-add both the Accessibility and Input Monitoring entries after replacing the app with a newer build."}},{"@type":"Question","name":"How do I add custom sound packs to Mechvibes on Mac?","acceptedAnswer":{"@type":"Answer","text":"Open a pack's page on mechvibes.com, click Download zip, and import the ZIP in the app. The one-click Install in Mechvibes button works only on Windows and Linux. To build your own pack, use the editor on mechvibes.com."}}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://keyslam.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://keyslam.com/blog/"},{"@type":"ListItem","position":3,"name":"Mechvibes not working on Mac","item":"https://keyslam.com/blog/mechvibes-not-working-mac/"}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH"]});try{var k=localStorage.getItem('ks-analytics');if(k)gtag('consent','update',{analytics_storage:k==='on'?'granted':'denied'});}catch(e){}gtag('set','ads_data_redaction',true);gtag('js',new Date());gtag('config','G-BM5WT1XXDH',{page_location:/^\/thanks\/?$/.test(location.pathname)?location.origin+location.pathname:location.href});</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BM5WT1XXDH"></script><script src="/assets/analytics.87637caff4.js" defer></script>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in"><a class="brand" href="/"><img src="/assets/icon.png" alt="" width="30" height="30">Keyslam</a><nav class="nav-links" aria-label="Main"><a href="/keyboard-simulator/">Try it</a><a href="/typing-test-with-sound/">Typing test</a><a href="/sounds/">Sounds</a><a href="/force-sensing/">Force sensing</a><a href="/compare/">Compare</a><a href="/pricing/">Pricing</a></nav><a class="btn" href="/pricing/">Get Keyslam</a></div></header><nav class="crumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Mechvibes not working on Mac</li></ol></nav><main id="top"><section class="page-hero"><div class="wrap page-hero-in"><div><p class="eyebrow">Troubleshooting</p><h1>Mechvibes not working on Mac: fixes for “can't be opened”, permissions and no sound</h1><p class="lede">Mechvibes 3 runs on Apple silicon Macs, but its Mac build is experimental and needs some help from you. Here's every common problem and its fix, from Mechvibes' own notes and macOS. Checked November 2, 2026.</p><div class="cta-row"><a class="btn" data-download href="https://keyslam.com/download/Keyslam.dmg">Download for Mac</a><a class="btn ghost" href="/keyboard-simulator/">Try it in your browser →</a></div><p class="updated">Updated <time datetime="2026-11-02">November 2, 2026</time></p></div></div></section><div class="section" style="padding-top:0"><div class="wrap stack"><p class="answer"><strong>Short answer:</strong> on a Mac, Mechvibes 3 has four common sticking points. macOS blocks it because the build isn't notarized. It's missing Accessibility or Input Monitoring. An update broke those permissions: its own README says to remove and re-add both after every update. Or the sound is going to a different output. There's also no Intel build yet, and the old Homebrew cask is disabled. Find your symptom below; most fixes take a minute or two.</p><section class="prose" id="version"><h2>First, check which Mechvibes you have</h2>
+<p>Select Mechvibes in Applications and choose File › Get Info to see its version.</p>
+<ul>
+<li><strong>3.x</strong> is Mechvibes 3, the current app, written in Rust. Version 3.4.0 came out on November 1, 2026. Its Mac download reads <q>macOS Apple Silicon (experimental)</q> (<a href="https://mechvibes.com/download" rel="noopener">download page</a>).</li>
+<li><strong>2.x</strong> is Mechvibes 2, the older Electron app. The download page says <q>Using Mechvibes 2? It is no longer developed.</q> Its repository was archived on October 30, 2026. If that's what you have, most fixes below won't help. Replace it with Mechvibes 3 from mechvibes.com/download.</li>
+</ul></section><section class="stack" id="symptoms"><h2>Find your symptom</h2><div class="table-wrap"><table class="cmp"><thead><tr><th scope="col">What you see</th><th scope="col">Most likely cause</th><th scope="col">Go to</th></tr></thead><tbody><tr><td>“Mechvibes” Not Opened, or Apple could not verify it is free of malware</td><td>The build isn't notarized by Apple</td><td><a href="#gatekeeper">Fix 1</a></td></tr><tr><td>“Mechvibes” is damaged and can't be opened</td><td>macOS's quarantine flag on an ad-hoc signed download</td><td><a href="#damaged">Fix 1b</a></td></tr><tr><td>It opens, but typing makes no sound anywhere</td><td>Accessibility or Input Monitoring is off</td><td><a href="#permissions">Fix 2</a></td></tr><tr><td>It worked until you updated it</td><td>The permissions still point at the old build</td><td><a href="#after-update">Fix 3</a></td></tr><tr><td>Silent in one app or field, or after you type a password</td><td>Secure input is on</td><td><a href="#no-sound">Fix 4</a></td></tr><tr><td>The sound comes late</td><td>Bluetooth headphones or speakers</td><td><a href="#delay">Fix 4</a></td></tr><tr><td>It won't run on an Intel Mac</td><td>There's no Intel build yet</td><td><a href="#intel">Fix 5</a></td></tr><tr><td><code>brew install --cask mechvibes</code> fails</td><td>The cask has been disabled</td><td><a href="#homebrew">Fix 6</a></td></tr><tr><td>“Install in Mechvibes” does nothing</td><td>One-click install isn't for Macs</td><td><a href="#packs">Fix 7</a></td></tr></tbody></table></div></section><section class="prose" id="setup"><h2>Setting up from scratch? Do it in this order</h2><ol class="steps"><li><span><strong>Download the right file.</strong> Get the Apple silicon DMG (v3.4.0, 52.0 MB) from <a href="https://mechvibes.com/download" rel="noopener">mechvibes.com/download</a>. There's no Intel build yet.</span></li><li><span><strong>Drag Mechvibes to Applications.</strong> Open the DMG and drag the app into your Applications folder.</span></li><li><span><strong>Open it, then allow it in Privacy &amp; Security.</strong> macOS blocks the first launch because the build isn't notarized. Fix 1 below shows how to allow it.</span></li><li><span><strong>Turn on Accessibility and Input Monitoring.</strong> Mechvibes needs both, in System Settings › Privacy &amp; Security.</span></li><li><span><strong>Quit and reopen Mechvibes, then pick a pack.</strong> The permissions take effect on the next launch. Type in any app to test it.</span></li></ol></section><section class="prose" id="gatekeeper"><h2>Fix 1: “Mechvibes Not Opened” or “can't be opened”</h2>
+<p>This is expected. The Mac build's README says: <q>It carries only an ad-hoc signature and is NOT notarized.</q> Notarization is Apple's automated check for apps downloaded outside the App Store, so without it, macOS won't open the app until you say so.</p>
+<h3>macOS 15 Sequoia and later</h3>
+<ol class="steps"><li><span><strong>Try to open Mechvibes once.</strong> macOS stops it. Click Done.</span></li><li><span><strong>Open System Settings › Privacy &amp; Security.</strong> Scroll down to Security. You'll see a line saying Mechvibes was blocked.</span></li><li><span><strong>Click Open Anyway.</strong> Confirm, and enter your password or use Touch ID when macOS asks. Mechvibes opens.</span></li></ol>
+<p>Apple says the Open Anyway button is there for about an hour after you try to open the app (<a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac" rel="noopener">Apple: open an app from an unknown developer</a>). If it's gone, try opening Mechvibes again first.</p>
+<h3>macOS 14 Sonoma and earlier</h3>
+<p>Control-click Mechvibes in Applications, choose Open, then click Open in the dialog. The System Settings route above works too.</p>
+<h3 id="damaged">Fix 1b: “Mechvibes is damaged and can't be opened”</h3>
+<p>On Apple silicon, macOS can show this for an ad-hoc signed app downloaded from the web, even when the file is fine, and Open Anyway may not appear. First, download it again from the official page, in case the file really did break. If the message comes back, you can clear macOS's quarantine flag for this one app:</p>
+<ol class="steps"><li><span><strong>Check where it came from.</strong> Only do this for a copy from mechvibes.com/download or the GitHub release.</span></li><li><span><strong>Open Terminal and type the command below,</strong> with a space at the end. Don't press Return yet.</span></li><li><span><strong>Drag Mechvibes from Applications into the Terminal window.</strong> That fills in the path. Now press Return.</span></li><li><span><strong>Open Mechvibes again.</strong> It should start without the warning.</span></li></ol>
+<pre style="margin:0;overflow-x:auto;padding:0.9rem 1.1rem;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:500 0.85rem/1.5 var(--mono)"><code>xattr -dr com.apple.quarantine </code></pre>
+<p>This switches off Gatekeeper's check for that app entirely, so be sure about the source. For what you're trusting when you do this, see <a href="/alternatives/mechvibes/#safe">is Mechvibes safe?</a></p></section><section class="prose" id="permissions"><h2>Fix 2: it opens, but there's no sound when you type</h2>
+<p>Mechvibes needs two switches on: Accessibility, which lets an app control your Mac through accessibility features (<a href="https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac" rel="noopener">Apple</a>), and Input Monitoring, which lets it see key presses while you work in other apps (<a href="https://support.apple.com/guide/mac-help/control-access-to-input-monitoring-on-mac-mchl4cedafb6/mac" rel="noopener">Apple</a>). Its macOS README talks about <q>both entries</q>, so check both.</p>
+<ol class="steps"><li><span><strong>Open System Settings › Privacy &amp; Security › Accessibility.</strong> Turn Mechvibes on. If it isn't in the list, click + and choose it from Applications.</span></li><li><span><strong>Go back and open Input Monitoring.</strong> Turn Mechvibes on there too, adding it with + if needed.</span></li><li><span><strong>Quit Mechvibes and open it again.</strong> Permissions take effect on the next launch. If you can't find its Quit command, select it in Activity Monitor and click the Stop button in the toolbar.</span></li></ol>
+</section><section class="prose" id="after-update"><h2>Fix 3: it stopped working after an update</h2>
+<p>This is the one people least expect, and Mechvibes warns about it. Its README for v3.4.0 says: <q>You have to remove and re-add both entries after replacing the app with a newer build</q>.</p>
+<ol class="steps"><li><span><strong>Quit Mechvibes.</strong> </span></li><li><span><strong>In Privacy &amp; Security › Accessibility, select Mechvibes and click − to remove it.</strong> Turning the switch off isn't enough; remove the entry.</span></li><li><span><strong>Do the same in Input Monitoring.</strong> </span></li><li><span><strong>Open Mechvibes and add it back to both lists.</strong> Approve the prompts, or use + in each list. Then quit and reopen it once more.</span></li></ol>
+<p>The likely reason: macOS ties these permissions to an app's code signature, and an ad-hoc signature is different for every build. After an update, macOS sees a new app, even if the old entry's switch still looks on. Expect to repeat this after each update while the Mac build is ad-hoc signed.</p></section><section class="prose" id="no-sound"><h2>Fix 4: no sound, or the sound comes late</h2>
+<p>If both permissions are on and Mechvibes has been relaunched, work down this list:</p>
+<ul>
+<li><strong>Check the output.</strong> Open Control Center › Sound, or System Settings › Sound › Output. Is the speaker or headphones you're listening on selected, and is the volume up?</li>
+<li><strong>Check Mechvibes itself.</strong> Make sure a sound pack is selected and its volume isn't turned down.</li>
+<li><strong>Check for secure input.</strong> macOS doesn't pass password-field keystrokes to apps that monitor input, so every keyboard sound app is silent there, by design. Terminal's Secure Keyboard Entry does the same for everything you type in Terminal. If sounds stop everywhere after you've typed a password, the app with that field may still be holding secure input; quitting it usually brings the sound back. More in <a href="/blog/is-input-monitoring-safe-mac/">what Input Monitoring can and can't see</a>.</li>
+</ul>
+<h3 id="delay">How to fix Mechvibes delay</h3>
+<p>Bluetooth headphones and speakers, AirPods included, add a delay to every sound your Mac plays, and with typing sounds you notice it. To check, switch the output to the built-in speakers or wired headphones and type again. If the delay goes away, it was the Bluetooth link. If it's there on built-in speakers too, report it (below).</p>
+<h3>Still silent?</h3>
+<p>The README is frank that this build <q>has never been run on a real Mac by the maintainer</q>, so you may have found a real bug. Open an issue on <a href="https://github.com/hainguyents13/mechvibes/issues" rel="noopener">Mechvibes' GitHub</a> with your Mac model, macOS version, and the steps you've tried. Reports from real Macs are how Mac bugs get found.</p></section><section class="prose" id="intel"><h2>Fix 5: Mechvibes on an Intel Mac</h2>
+<p>There's no fix yet. Mechvibes' own troubleshooting post says: <q>Intel Macs are not supported yet ( issue #128 ).</q> The good news is in that issue: <q>an Intel Mac build is now merged and ships with the next release.</q> Watch the <a href="https://mechvibes.com/download" rel="noopener">download page</a> for it.</p>
+<p>Don't fall back on the old Homebrew cask (next fix). If you'd rather not wait, see <a href="/keyboard-sounds-intel-mac/">keyboard sound apps that run on Intel Macs today</a>.</p></section><section class="prose" id="homebrew"><h2>Fix 6: Homebrew won't install Mechvibes</h2>
+<p>The <code>mechvibes</code> cask still points at Mechvibes 2 (version 2.3.4), and Homebrew disabled it on September 1, 2026. Its cask data gives the reason as <code>"disable_reason":"fails_gatekeeper_check"</code>. So <code>brew install --cask mechvibes</code> won't give you a working app. Download Mechvibes 3 from <a href="https://mechvibes.com/download" rel="noopener">mechvibes.com/download</a> instead.</p></section><section class="prose" id="packs"><h2>Fix 7: sound packs won't install</h2>
+<p>The library's one-click button isn't meant for Macs. In Mechvibes' words: <q>The Install in Mechvibes button in the library works on Windows and Linux. On a Mac, click Download zip on a pack's page</q>. Then import that ZIP in the Mechvibes app. To make your own pack, use the editor on <a href="https://mechvibes.com/" rel="noopener">mechvibes.com</a>.</p></section><p class="fine">Wondering whether it's wise to override Gatekeeper and grant two permissions? That's answered in <a href="/alternatives/mechvibes/#safe">is Mechvibes safe?</a></p><section class="prose" id="rather-not"><h2>Rather not fix it?</h2>
+<p>If Mechvibes is working for you now, there's no need to switch. It's free, and nothing above is hard once you know it. If you'd rather have something that installs like an ordinary Mac app, two options:</p>
+<ul>
+<li><strong>KeyEcho</strong> is free with optional paid packs. Its macOS builds are notarized, with separate downloads for Apple silicon and Intel. See <a href="/alternatives/keyecho/">KeyEcho's packs and prices</a>.</li>
+<li><strong>Keyslam</strong> is our app: $3.99 once after a 7-day free trial. It asks for Input Monitoring only, makes no network connections, runs on macOS 13 Ventura or later on Apple silicon or Intel, and on MacBooks with the motion sensor it follows how hard you type. It's Developer ID-signed and notarized by Apple, so Gatekeeper opens it with the normal prompt for apps from the internet; see the <a href="/download/">install steps and requirements</a>.</li>
+</ul>
+<p>Everything else, free and paid, is in <a href="/compare/">the Mac keyboard sound app comparison</a>, and the Mechvibes trade-offs are laid out in <a href="/alternatives/mechvibes/">Mechvibes vs Keyslam vs Klack</a>.</p></section><section class="stack"><h2>Mechvibes on Mac: quick answers</h2><div class="card faq"><details open><summary>Why is Mechvibes not working on my Mac?</summary><p>Usually one of these: macOS blocked it because it isn't notarized (Fix 1), Accessibility or Input Monitoring is off (Fix 2), an update invalidated those permissions (Fix 3), or the sound is going to another output (Fix 4). On an Intel Mac, there's no build yet (Fix 5).</p></details><details><summary>Does Mechvibes work on Apple silicon and Intel Macs?</summary><p>Apple silicon, yes: version 3.4.0 has an Apple silicon build, marked experimental. Intel, not yet. GitHub issue 128 says an Intel build is merged and ships with the next release.</p></details><details><summary>Why does Mechvibes stop working after every update?</summary><p>Because macOS treats each new ad-hoc signed build as a different app. Its README says you have to remove and re-add both the Accessibility and Input Monitoring entries after replacing the app with a newer build.</p></details><details><summary>How do I add custom sound packs to Mechvibes on Mac?</summary><p>Open a pack's page on mechvibes.com, click Download zip, and import the ZIP in the app. The one-click Install in Mechvibes button works only on Windows and Linux. To build your own pack, use the editor on mechvibes.com.</p></details></div></section><section class="stack" id="sources"><h2>Sources</h2><p class="sources">Every Mechvibes quote on this page is copied word for word from these, checked <time datetime="2026-11-02">November 2, 2026</time>. Mechvibes changes quickly; if a fix here is out of date, <a href="/contact/">tell us</a>.</p><ul class="sources" style="display:grid;gap:0.3rem;padding-left:1.1rem"><li><a href="https://github.com/hainguyents13/mechvibes/releases/download/v3.4.0/README-macos-3.4.0.txt" rel="noopener">Mechvibes v3.4.0 macOS README</a></li><li><a href="https://mechvibes.com/download" rel="noopener">mechvibes.com/download</a> (<a href="https://web.archive.org/web/20261102211910/https://mechvibes.com/download" rel="noopener">archived</a>)</li><li><a href="https://github.com/hainguyents13/mechvibes/releases/tag/v3.4.0" rel="noopener">Mechvibes v3.4.0 release</a> (<a href="https://web.archive.org/web/20261102213452/https://github.com/hainguyents13/mechvibes/releases/tag/v3.4.0" rel="noopener">archived</a>)</li><li><a href="https://mechvibes.com/blog/mechvibes-not-working-mac" rel="noopener">Mechvibes' own Mac troubleshooting post</a> (<a href="https://web.archive.org/web/20261102211836/https://mechvibes.com/blog/mechvibes-not-working-mac" rel="noopener">archived</a>)</li><li><a href="https://github.com/hainguyents13/mechvibes/issues/128" rel="noopener">GitHub issue 128 (Intel build)</a></li><li><a href="https://formulae.brew.sh/api/cask/mechvibes.json" rel="noopener">Homebrew cask data for mechvibes</a> (<a href="https://web.archive.org/web/20261102214127/https://formulae.brew.sh/api/cask/mechvibes.json" rel="noopener">archived</a>)</li><li><a href="https://github.com/hainguyents13/mechvibes-electron" rel="noopener">Mechvibes 2 (Electron) repository</a> (<a href="https://web.archive.org/web/20261102213510/https://github.com/hainguyents13/mechvibes-electron" rel="noopener">archived</a>)</li><li><a href="https://mechvibes.com/" rel="noopener">mechvibes.com</a> (<a href="https://web.archive.org/web/20261102213215/https://mechvibes.com/" rel="noopener">archived</a>)</li><li><a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac" rel="noopener">Apple: open a Mac app from an unknown developer</a></li></ul></section><section class="stack"><h2>Keep exploring</h2><div class="cards"><a class="card link-card" href="/alternatives/mechvibes/"><strong>Mechvibes alternative for Mac</strong><span>What Mechvibes 3 asks of your Mac, line by line</span></a><a class="card link-card" href="/blog/is-input-monitoring-safe-mac/"><strong>Is Input Monitoring safe?</strong><span>Check any keyboard sound app yourself</span></a><a class="card link-card" href="/free-keyboard-sound-apps-mac/"><strong>Free keyboard sound apps for Mac</strong><span>Every free option, honestly compared</span></a><a class="card link-card" href="/blog/make-macbook-sound-like-mechanical-keyboard/"><strong>Make a MacBook sound mechanical</strong><span>The whole setup, start to finish</span></a></div></section></div></div></main><footer><div class="wrap"><div class="foot-cols"><div><h2>Product</h2><ul><li><a href="/">Home</a></li><li><a href="/download/">Download</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/force-sensing/">Force sensing</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/help/no-sound/">Help: no sound</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="/about/">About</a></li><li><a href="/press/">Press kit</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy</a></li></ul></div><div><h2>Sounds</h2><ul><li><a href="/sounds/mx-blue/">MX Blue</a></li><li><a href="/sounds/mx-brown/">MX Brown</a></li><li><a href="/sounds/mx-red/">MX Red</a></li><li><a href="/sounds/mx-black/">MX Black</a></li><li><a href="/sounds/gateron-red/">Gateron Red</a></li><li><a href="/sounds/topre/">Topre</a></li><li><a href="/sounds/leopold/">Leopold</a></li><li><a href="/sounds/whitefox/">WhiteFox</a></li><li><a href="/sounds/rainy-75/">Rainy 75</a></li><li><a href="/sounds/unicomp/">Unicomp</a></li><li><a href="/sounds/model-f/">Model F</a></li><li><a href="/sounds/vintage-technics/">Vintage Technics</a></li><li><a href="/sounds/laptop/">Laptop</a></li><li><a href="/sounds/selectric/">Selectric</a></li><li><a href="/sounds/olivetti/">Olivetti</a></li><li><a href="/sounds/">All sounds</a></li></ul></div><div><h2>Compare</h2><ul><li><a href="/compare/">All Mac keyboard sound apps</a></li><li><a href="/alternatives/klack/">Klack alternative</a></li><li><a href="/alternatives/haptyk/">Haptyk alternative</a></li><li><a href="/alternatives/tapnoise/">TapNoise alternative</a></li><li><a href="/alternatives/mechvibes/">Mechvibes alternative</a></li><li><a href="/alternatives/keyecho/">KeyEcho alternative</a></li></ul></div><div><h2>Tools</h2><ul><li><a href="/keyboard-simulator/">Mechanical keyboard simulator</a></li><li><a href="/keyboard-sound-test/">Keyboard sound test</a></li><li><a href="/typing-test-with-sound/">Typing test with sound</a></li><li><a href="/keyboard-sound-effects/">Free keyboard sound effects</a></li><li><a href="/mechanical-keyboard-sounds-mac/">Mechanical keyboard sounds for Mac</a></li><li><a href="/typing-sounds-macbook/">MacBook typing sounds</a></li><li><a href="/typewriter-sounds-mac/">Typewriter sounds for Mac</a></li><li><a href="/asmr-keyboard-sounds-mac/">ASMR keyboard sounds</a></li><li><a href="/keyboard-sounds-intel-mac/">Intel Mac, iMac and Mac mini</a></li></ul></div><div><h2>Guides</h2><ul><li><a href="/free-keyboard-sound-apps-mac/">Free keyboard sound apps for Mac</a></li><li><a href="/alternatives/thock/">Thock for Mac</a></li><li><a href="/blog/which-macbooks-have-an-accelerometer/">Which MacBooks have an accelerometer</a></li><li><a href="/blog/cherry-mx-blue-vs-brown-vs-red-sound/">MX Blue vs Brown vs Red sound</a></li><li><a href="/blog/make-macbook-sound-like-mechanical-keyboard/">Make a MacBook sound mechanical</a></li><li><a href="/blog/mac-keyboard-click-sounds-on-off/">Mac keyboard click sounds</a></li><li><a href="/blog/mechvibes-not-working-mac/">Mechvibes not working on Mac</a></li><li><a href="/blog/">All guides</a></li></ul></div></div><div class="foot"><span>© 2026 Keyslam. Mac and MacBook are trademarks of Apple Inc. Switch and keyboard names describe the boards that were recorded and belong to their owners.</span><span>Prices checked November 2, 2026.</span></div></div></footer>
+</body>
+</html>
